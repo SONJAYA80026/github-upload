@@ -6,3 +6,4 @@
 - git@github.com:hugo53/awesome-RemoteWork.git
 - git@github.com:INOS-soft/GitHub.git
 - git@github.com:INOS-soft/virtual-environments-forge-ultralite.git
+- git@github.com:wyattowalsh/wyattowalsh.git
