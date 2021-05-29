@@ -36,6 +36,8 @@ jobs:
     - name: Test with pytest
       run: - name: EKS on Fargate
   uses: aws-actions/amazon-eks-fargate@v0.1.1
+- name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions
+  uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
 
         pytest: Super-Ghcz-master
  >
