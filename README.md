@@ -34,7 +34,9 @@ jobs:
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
-      run: |
+      run: - name: EKS on Fargate
+  uses: aws-actions/amazon-eks-fargate@v0.1.1
+
         pytest: Super-Ghcz-master
  >
 - git@github.com:INOS-soft/The-Journey-0.60sec-atom.git
