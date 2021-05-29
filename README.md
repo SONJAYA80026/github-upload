@@ -10,6 +10,10 @@ on:
 jobs:
   build:
 
+- name: "AWS CodeBuild run build" Action For GitHub Actions
+  uses: aws-actions/aws-codebuild-run-build@v1.0.3
+
+
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
