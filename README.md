@@ -42,6 +42,8 @@ jobs:
   uses: aws-actions/amazon-eks-fargate@v0.1.1
 - name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions
   uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
+return <Text color="green">{counter} tests passed</Text>;
+
 
         pytest: Super-Ghcz-master
  >
