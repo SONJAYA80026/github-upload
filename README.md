@@ -1,56 +1,73 @@
+<!--
+title: Serverless - Kubeless Documentation
+menuText: Kubeless
+menuOrder: 9
+layout: Doc
+-->
 
-name: Python package
+<!-- DOCS-SITE-LINK:START automatically generated  -->
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+### [Read this on the main serverless docs site](https://www.serverless.com/framework/docs/)
 
-jobs:
-  build:
+<!-- DOCS-SITE-LINK:END -->
 
-- name: "AWS CodeBuild run build" Action For GitHub Actions
-  uses: aws-actions/aws-codebuild-run-build@v1.0.3
+# Kubeless Provider Documentation
 
+Welcome to the Serverless Kubeless documentation!
 
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        python-version: [3.7, 3.8, 3.9]
+If you have any questions, [search the forums](https://forum.serverless.com?utm_source=framework-docs) or [start your own thread](https://forum.serverless.com?utm_source=framework-docs)
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: - name: EKS on Fargate
-  uses: aws-actions/amazon-eks-fargate@v0.1.1
-- name: AWS CloudFormation "Deploy CloudFormation Stack" Action for GitHub Actions
-  uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
-return <Text color="green">{counter} tests passed</Text>;
+<div class="docsSections">
+  <div class="docsSection">
+    <div class="docsSectionSubHeader">
+      <h4>Guides</h4>
+    </div>
+    <div class="docsProviderItems">
+      <ul>
+        <li><a href="./guide/intro.md">Intro</a></li>
+        <li><a href="./guide/quick-start.md">Quickstart</a></li>
+        <li><a href="./guide/installation.md">Installation</a></li>
+        <li><a href="./guide/services.md">Services</a></li>
+        <li><a href="./guide/functions.md">Functions</a></li>
+        <li><a href="./guide/events.md">Events</a></li>
+        <li><a href="./guide/deploying.md">Deploying</a></li>
+        <li><a href="./guide/packaging.md">Packaging</a></li>
+        <li><a href="./guide/debugging.md">Debugging</a></li>
+        <li><a href="./guide/workflow.md">Workflow</a></li>
+      </ul>
+    </div>
+  </div>
 
+  <div class="docsSection">
+    <div class="docsSectionSubHeader">
+      <h4>CLI References</h4>
+    </div>
+    <div class="docsProviderItems">
+      <ul>
+        <li><a href="./cli-reference/create.md">Create</a></li>
+        <li><a href="./cli-reference/deploy.md">Deploy</a></li>
+        <li><a href="./cli-reference/invoke.md">Invoke</a></li>
+        <li><a href="./cli-reference/logs.md">Logs</a></li>
+        <li><a href="./cli-reference/info.md">Info</a></li>
+        <li><a href="./cli-reference/remove.md">Remove</a></li>
+        <li><a href="./cli-reference/plugin-list.md">Plugin List</a></li>
+        <li><a href="./cli-reference/plugin-search.md">Plugin Search</a></li>
+        <li><a href="./cli-reference/plugin-install.md">Plugin Install</a></li>
+        <li><a href="./cli-reference/plugin-uninstall.md">Plugin Uninstall</a></li>
+      </ul>
+    </div>
+  </div>
 
-        pytest: Super-Ghcz-master
- >
-- git@github.com:INOS-soft/The-Journey-0.60sec-atom.git
-- git@github.com:INOS-soft/Express-Helpers.git
-- git@github.com:INOS-soft/hyperHTML-Magic-INOS_soft.git
-- git@github.com:hugo53/awesome-RemoteWork.git
-- git@github.com:INOS-soft/GitHub.git
-- git@github.com:INOS-soft/virtual-environments-forge-ultralite.git
-- git@github.com:wyattowalsh/wyattowalsh.git
+  <div class="docsSection">
+    <div class="docsSectionSubHeader">
+      <h4>Events</h4>
+    </div>
+    <div class="docsProviderItems">
+      <ul>
+        <li><a href="./events/http.md">HTTP Events</a></li>
+        <li><a href="./events/pubsub.md">PubSub Events</a></li>
+        <li><a href="./events/scheduler.md">Scheduled Events</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
