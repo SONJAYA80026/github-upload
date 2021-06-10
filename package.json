@@ -21,7 +21,7 @@
     "@types/mocha": "^8.2.2",
     "@types/node": "^15.12.2",
     "@types/semver": "^7.3.3",
-    "@types/send": "^0.14.5",
+    "@types/send": "^0.17.0",
     "@types/split": "^1.0.0",
     "@types/stream-json": "^1.5.1",
     "@types/temp": "^0.9.0",
